@@ -1,0 +1,76 @@
+body {
+    margin-left: 0;
+    margin-right: 0;
+    background-color: $secondary-color;
+    color: $tertiary-color;
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 480px) {
+    body {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .t64 {
+        font-family: Inter;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 36px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    body {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .t64 {
+        font-family: Inter;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 36px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    body {
+        margin-left: 32px;
+        margin-right: 32px;
+    }
+
+    .t64 {
+        font-family: Inter;
+        font-size: 54px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 54px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    body {
+        margin-left: 32px;
+        margin-right: 32px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1919px) {
+    body {
+        margin-left: 32px;
+        margin-right: 32px;
+    }
+}
+
+@media (min-width: 1920px) {
+    body {
+        margin-left: 32px;
+        margin-right: 32px;
+    }
+}

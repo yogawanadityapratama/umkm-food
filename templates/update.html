@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='/favicon/favicon.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Aplikasi Blog Sederhana</title>
+</head>
+<body style="margin-top: 72px;">
+    <nav>
+        <ul>
+            <li><a href="/">Beranda</a></li>/
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+    </nav>
+    <div class="dashboard">
+        <form class="form" method="post" action="{{ url_for('update', id=post[0]) }}">
+            <div class="input">
+                <label for="nama">Nama Produk</label><br>
+                <input type="text" name="nama" value="{{ post[1] }}">
+            </div>
+    
+            <div class="input">
+                <label for="ket">Deskripsi Produk</label><br>
+                <input type="text" name="ket" value="{{ post[2] }}">
+            </div>
+    
+            <div class="input">
+                <label for="harga">Harga Produk</label><br>
+                <input type="text" name="harga" value="{{ post[3] }}">
+            </div>
+    
+            <div class="input">
+                <label for="link">Link Produk</label><br>
+                <input type="text" name="link" value="{{ post[4] }}">
+            </div>
+    
+            <div class="input">
+                <label for="link_image">Link Gambar</label><br>
+                <input type="text" name="link_image" value="{{ post[5] }}">
+            </div>
+    
+            <button type="submit">Ubah Produk</button>
+        </form>
+    </div>
+</body>
+</html>

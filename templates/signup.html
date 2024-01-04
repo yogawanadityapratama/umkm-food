@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='/favicon/favicon.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Sign Up</title>
+</head>
+<body>
+  <nav>
+    <ul>
+        <li><a href="/">Beranda</a></li>/
+        <li><a href="/signin">Sign In</a></li>/
+        <li><a href="/signup">Sign Up</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <h2>Sign Up</h2>    
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul>
+          {% for message in messages %}
+            <li>{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    <form action="/signup" method="post">
+      <div class="username">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Input Username" required>
+      </div>
+
+      <div class="password">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Input Password" required>
+      </div>
+      
+      <div class="button">
+        <input type="submit" value="Sign Up">
+      </div>
+    </form>
+  </div>
+  <script src="/src/js/script.js"></script>
+</body>
+</html>
